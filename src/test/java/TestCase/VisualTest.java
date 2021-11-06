@@ -19,7 +19,7 @@ public class VisualTest extends DriverClass {
     String url;
     @Parameters("env")
     @Test
-    public void snapProd(String env) {
+    public void snapProd(String env) throws InterruptedException {
         if (env.contains("prod")){
             url = config.getProperty("produrl");
         }else if (env.contains("stage")){

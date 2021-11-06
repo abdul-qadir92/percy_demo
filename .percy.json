@@ -1,0 +1,29 @@
+{
+  "version": 1,
+  "snapshot": {
+    "widths": [375, 720, 1280, 1440, 1920],
+    "min-height": 1024,
+    "percy-css": "iframe { display: none; }"
+  },
+  "static-snapshots": {
+    "path": "_site/",
+    "base-url": "/blog/",
+    "snapshot-files": "**/*.html",
+    "ignore-files": "**/*.htm"
+  },
+  "agent": {
+    "asset-discovery": {
+      "allowed-hostnames": [
+        "https://1q5n8517v76m59e8m43p09gr-wpengine.netdna-ssl.com/*",
+        "https://3fxtqy18kygf3on3bu39kh93-wpengine.netdna-ssl.com/*"
+      ],
+      "request-headers": {
+        "Authorization": "Basic dXNlcm5hbWU6cGFzc3dvcmQ="
+      },
+      "network-idle-timeout": 150,
+      "cache-responses": true,
+      "page-pool-size-min": 5,
+      "page-pool-size-max": 20
+    }
+  }
+}
