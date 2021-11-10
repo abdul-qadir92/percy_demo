@@ -2,12 +2,14 @@ package Helper;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import io.percy.selenium.Percy;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.safari.SafariDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Parameters;
 
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
@@ -20,6 +22,7 @@ public class DriverClass {
     BufferedReader reader;
     String browser;
     public static Percy percy;
+
 
     @BeforeMethod
     public void launch() throws FileNotFoundException {
@@ -56,5 +59,6 @@ public class DriverClass {
     @AfterMethod
     public void tearDown(){
         driver.quit();
+        System.out.println("tearDown : "+driver);
     }
 }
